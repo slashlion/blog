@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %} --create entry-- {% endblock %}
+
+{% block content %}
+
+
+<!-- Blog Create Entry  -->
+      <div class="col-md-8">
+
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+
+          <div class="card-header">
+              <h1> Loggin to you Account </h1> <br/> <br/>
+
+        <form  method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+              <button type="submit" class="btn btn-primary"> Login</button> <br/> <br/>
+            <p><a href="{% url 'register' %}" class="btn btn-primary">Get an account &rarr;</a></p>
+        </form>
+
+
+
+          </div>
+
+          <div class="card-body">
+
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+{% endblock %}
